@@ -60,6 +60,30 @@
             font-weight: bold;
         };
     }
+    .hide-left-col {
+       z-index: 999;
+       cursor: pointer;
+       transition:all .2s ease-in;
+       position: fixed;
+       top: 0;
+       left: left-col-width;
+       text-align: center;
+       line-height: 30px;
+       display: block;
+       width: 30px;
+       height: 30px;
+       font-size: 28px;
+       background: none;
+       .fa {
+           color: rgb(255, 255, 255, .5);
+       }
+       &:hover {
+           background: rgba(147, 181, 224, .3) !important;
+           .fa {
+               color: white;
+           }
+       }
+    }
     .mid-col {
         position:absolute;
         right:0;
@@ -70,8 +94,11 @@
     }
 
     @media screen and (max-width:1040px) {
-        
+
     }@media screen and (max-width:800px) {
+        .hide-left-col {
+            display: none;
+        }
         @import "_partial/mobile"
     }
 }
@@ -288,6 +315,7 @@
 #post-nav-button {
     left: left-col-width;
     top: 61.8%;
+    transition: left .2s ease-in;
     a {
         border-bottom-color: transparent;
         background: none;
