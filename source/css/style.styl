@@ -20,18 +20,23 @@ input, button
     padding: 0
 
 html
-  font-size base-font-size
+  height: 100%;
+  min-height: 100%;
+  min-width: 300px;
+  font-size: base-font-size;
 
 body
+  height: 100%;
+  min-height: 100%;
   font-family: font-sans, font-chs, sans-serif;
-  background: #fff;
+  background: #F5DFC6;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
   color: #333
   -webkit-overflow-scrolling: touch
 
-::selection 
+::selection
   background: rgba(147, 181, 224, .6);
   color: white;
 
@@ -70,7 +75,7 @@ a {
   float:right
 }
 .clearfix {
-  *zoom:1
+  zoom:1
 }
 .clearfix:after {
   content:"";
@@ -84,9 +89,17 @@ a {
 .hide{
   display: none;
 }
-@media screen and (max-width:1040px) {
+@media screen and (min-width:769px) and (max-width:1040px) {
+  html {
+    font-size: 14px !important;
+  }
   .inner {
     width:100%
+  }
+}
+@media only screen and (max-width:768px) {
+  html {
+    font-size: 16px !important;
   }
 }
 
@@ -95,7 +108,6 @@ a {
 @import "_partial/archive"
 @import "_partial/article"
 @import "_partial/archive"
-@import "_partial/highlight"
 @import "_partial/footer"
 
 if share
@@ -114,3 +126,16 @@ if search
 
 if sidebar
   @import "_partial/sidebar"
+
+.article-entry code
+  color gray
+  padding .05em .3em
+  border-radius 3px
+  //box-shadow 1px 1px 1px rgba(0,0,0, .08)
+  background rgba(255, 250, 165, .7)
+
+.article-entry pre code
+  padding 0
+
+.fancybox-image
+  background #ffffff !important
