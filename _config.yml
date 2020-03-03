@@ -232,7 +232,7 @@ fancybox: true
 
 # Display Math(LaTeX, MathML...) | 数学公式支持
 ## https://www.mathjax.org/
-mathjax: false
+mathjax: true
 
 # Socail Share | 是否开启分享
 share: 
@@ -281,8 +281,8 @@ CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
   require: //cdn.bootcss.com/require.js/2.2.0/require.min.js
   fontawesome: //cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css
-  fancybox_js: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
-  fancybox_css: //cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
+  fancybox_js: //cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js
+  fancybox_css: //cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css
   animate_css: //cdn.bootcss.com/animate.css/3.5.1/animate.min.css
   jquery_ui_js: //cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js
   jquery_ui_css: //cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css

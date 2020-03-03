@@ -76,9 +76,19 @@ require([], function (){
                     }
                     var width = imgArr.eq(i).attr("width");
                     var height = imgArr.eq(i).attr("height");
-                    imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' width="+width+" height="+height+" title='"+title+"' alt='"+title+"'></a>");
+                    imgArr.eq(i).replaceWith("<a class='fancy-ctn' href='"+src+"' title='"+title+"' data-fancybox='images' data-caption='"+src.substring(src.lastIndexOf("/")+1)+"'><img src='"+src+"' width="+width+" height="+height+" title='"+title+"' alt='"+title+"'></a>");
                 }
-                $(".article-inner .fancy-ctn").fancybox({ type: "image" });
+                $(".article-inner .fancy-ctn").fancybox({
+                  loop: true,
+                  touch: false,
+                  toolbar: true,
+                  wheel: false,
+                  buttons: [
+                    "fullScreen",
+                    "thumbs",
+                    "close"
+                  ],
+                });
             }
         })
     }
