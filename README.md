@@ -1,5 +1,5 @@
 ## Demo
-[Shawn's blog](www.lazyshawn.cn)
+[Shawn's blog](https://www.lazyshawn.cn)
 
 ## Install
 ```
